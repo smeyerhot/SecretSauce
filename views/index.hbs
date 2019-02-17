@@ -9,9 +9,20 @@
 <br/>
 <% if(user) { %>
 <b>User: </b> <label id="user"><%= user %></label> <a href="/logout" style='color:blue;text-decoration: underline'> Log out</a>
-<% } %>
+<% } %> 
 
-
+<html>
+    <body>
+        <div>
+            <hr />
+            <form action="/user_create" method="POST">
+                <input placeholder="Firstname" name="create_first_name" />
+                <input placeholder="Lastname" name="create_last_name" />
+                <button>Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
 <div id="ask" class="bordered" style="display: none;">
     Name: <input type="text" id="name"/> <a href="#"><span class="join">Join!</span></a>
 </div>
